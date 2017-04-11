@@ -1,0 +1,40 @@
+###########################################################
+#      MAINTAINER: Ryu Gou <376832293@qq.com>         #
+###########################################################
+
+# PHP + NGINX Container #----------------------------------
+php-nginx:
+  image: ryugou/jiyu_phalcon:1.0
+  container_name: php-nginx
+  ports:
+    - "80:80"
+    - "443:443"  
+  volumes:
+    - ./settings/nginx:/etc/nginx/sites-available
+    - ../:/var/www
+    - ./logs/nginx:/var/log/nginx
+  links:
+    - mysql
+    - redis
+  environment:
+    - REDIS_PORT=6379
+
+# MySQL Container #----------------------------------------
+mysql:
+  image: mysql:5.6
+  container_name: mysql
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: homestead
+    MYSQL_DATABASE: homestead
+    MYSQL_USER: homestead
+    MYSQL_PASSWORD: secret
+
+# Redis Container #----------------------------------------
+redis:
+  image: chuanty/redis:3.0
+  container_name: redis
+  ports:
+    - "6379:6379"
+
