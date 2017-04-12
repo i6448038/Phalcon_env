@@ -16,6 +16,7 @@ php-nginx:
   links:
     - mysql
     - redis
+    - memcached  
   environment:
     - REDIS_PORT=6379
 
