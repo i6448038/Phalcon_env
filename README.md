@@ -7,11 +7,11 @@
   使用步骤：
   + 找到某个项目的根目录下，运行：
     
-    git clone https://github.com/i6448038/Phalcon_env.git docker
+    ```git clone https://github.com/i6448038/Phalcon_env.git docker```
   
   + ``cd docker``进入到docker目录下
     
-    docker-compose up -d
+    ```docker-compose up -d```
   
   完毕！喝杯茶等五分钟。。。然后打开``localhost``试试
   

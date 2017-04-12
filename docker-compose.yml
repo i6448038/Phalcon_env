@@ -33,7 +33,7 @@ mysql:
 
 # Redis Container #----------------------------------------
 redis:
-  image: chuanty/redis:3.0
+  image: redis:3.0
   container_name: redis
   ports:
     - "6379:6379"
