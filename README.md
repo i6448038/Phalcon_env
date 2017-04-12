@@ -3,7 +3,7 @@
   更糟心的是，好几个项目，都需要运行，却使用着不同的框架版本和PHP版本...你本地搭建一个环境试试~
   本项的目的是让大家迅速搭建一个Phalcon项目，三分钟内开发环境搞定。
 ## 使用前提
-  使用此项目需要你首先下载docker。docker具体使用情况请见官网 [docker] (https://www.docker.com)
+  使用此项目需要你首先下载docker。docker具体使用情况请见官网 [docker](https://www.docker.com)
   使用步骤：
   + 找到某个项目的根目录下，运行：
     
@@ -22,9 +22,18 @@
 ## 镜像说明
   本项目目前的镜像有：
   + php-nginx 安装有php、Phalcon扩展和nginx的镜像
+  + 代码存放在php-nginx 容器中，一进入容器就可看到代码。此容器和redis、mysql、mongo、memcached建立了连接。连接地址分别是``redis``、
+  ``mysql``、``mongo``和``memcached``。（PS：假如想要访问redis,那么配置文件中redis的host地址就得写redis）
   + mysql mysql的root用户password是homestead，用户名是：homestead，密码是：secret，端口是：3306
   + redis 端口是6379
-
+  + memcached 端口是11211
+  + mongoDB 端口是 27137
+##
+想要切换其他版本的Phalcon可以切一下git分之  
+  
+  
+  
+    
   
     
 
