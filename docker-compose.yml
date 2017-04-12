@@ -38,3 +38,10 @@ redis:
   ports:
     - "6379:6379"
 
+# Memcached Container #---------------------------------
+memcached:
+    image: memcached:1.4
+    container_name: memcached
+    ports:
+      - "11211:11211"
+    mem_limit: 1g    
