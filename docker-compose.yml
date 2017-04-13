@@ -49,7 +49,7 @@ memcached:
 
 # mongo Container #----------------------------------
 mongo:
-  image: 3.0.14  
+  image: mongo:3.0.14  
   container_name: mongo
   ports:
     - "27017:27017"
