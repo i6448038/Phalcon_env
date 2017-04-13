@@ -4,7 +4,7 @@
 
 # PHP + NGINX Container #----------------------------------
 php-nginx:
-  image: ryugou/jiyu_phalcon:1.0
+  image: ryugou/jiyu_phalcon:3.0
   container_name: php-nginx
   ports:
     - "80:80"
