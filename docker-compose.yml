@@ -16,7 +16,8 @@ php-nginx:
   links:
     - mysql
     - redis
-    - memcached  
+    - memcached
+    - mongo    
   environment:
     - REDIS_PORT=6379
 
@@ -45,4 +46,11 @@ memcached:
     container_name: memcached
     ports:
       - "11211:11211"
-    mem_limit: 1g    
+    mem_limit: 1g
+
+# mongo Container #----------------------------------
+mongo:
+  image: mongo:3.0.14  
+  container_name: mongo
+  ports:
+     - "27017:27017"        
