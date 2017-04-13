@@ -16,7 +16,8 @@ php-nginx:
   links:
     - mysql
     - redis
-    - memcached  
+    - memcached 
+    - mongo  
   environment:
     - REDIS_PORT=6379
 
@@ -28,7 +29,6 @@ mysql:
     - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: homestead
-    MYSQL_DATABASE: homestead
     MYSQL_USER: homestead
     MYSQL_PASSWORD: secret
 
@@ -46,3 +46,11 @@ memcached:
     ports:
       - "11211:11211"
     mem_limit: 1g    
+
+# mongo Container #----------------------------------
+mongo:
+  image: 3.0.14  
+  container_name: mongo
+  ports:
+    - "27017:27017"
+
